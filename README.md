@@ -208,5 +208,3 @@ public void finish() throws IOException {
 
 ## 总结
 到目前为止，将 MP4 文件转换为 GIF 文件的实现过程基本完成，如果需要对 GIF 文件进行裁剪、添加水印等处理的话，可以在 Bitmap 序列写入 GIF 之前，对 Bitmap 进行相应的处理即可，如果有什么问题欢迎交流学习。
-
-[源码下载地址](https://github.com/GLGJing/GIFBuilder)
