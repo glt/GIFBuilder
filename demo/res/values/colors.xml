@@ -2,5 +2,6 @@
 <resources>
 
     <color name="red_primary">#dc5d54</color>
+    <color name="red_dark">#bb4f47</color>
 
 </resources>

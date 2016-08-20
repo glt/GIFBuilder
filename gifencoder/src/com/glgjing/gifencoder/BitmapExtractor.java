@@ -7,9 +7,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class BitmapExtract {
+public class BitmapExtractor {
 
-  private String filePath;
+  private static final int US_OF_S = 1000 * 1000;
+
   private List<Bitmap> bitmaps = new ArrayList<>();
   private int width = 0;
   private int height = 0;
@@ -21,9 +22,9 @@ public class BitmapExtract {
   public List<Bitmap> createBitmaps(String path) {
     MediaMetadataRetriever mmr = new MediaMetadataRetriever();
     mmr.setDataSource(path);
-    double inc = 1000 * 1000 / fps;
+    double inc = US_OF_S / fps;
 
-    for (double i = begin; i < end; i += inc) {
+    for (double i = begin * US_OF_S; i < end * US_OF_S; i += inc) {
       Bitmap frame = mmr.getFrameAtTime((long) i, MediaMetadataRetriever.OPTION_CLOSEST);
       if (frame != null) {
         bitmaps.add(scale(frame));
@@ -33,17 +34,17 @@ public class BitmapExtract {
     return bitmaps;
   }
 
-  private void setSize(int width, int height) {
+  public void setSize(int width, int height) {
     this.width = width;
     this.height = height;
   }
 
-  private void setScope(int begin, int end) {
+  public void setScope(int begin, int end) {
     this.begin = begin;
     this.end = end;
   }
 
-  private void setFPS(int fps) {
+  public void setFPS(int fps) {
     this.fps = fps;
   }
 

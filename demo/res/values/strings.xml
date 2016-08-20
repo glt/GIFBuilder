@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">GIFBuilder</string>
+
+    <string name="select_video">选取视频</string>
+    <string name="create_gif">生成 GIF</string>
+    <string name="building_init">点击按钮, 生成 GIF</string>
+    <string name="building_gif">正在生成 GIF, 请稍候</string>
+    <string name="building_complete">生成完成</string>
+
 </resources>

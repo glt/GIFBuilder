@@ -4,11 +4,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
+    <TextView
         android:id="@+id/select_video"
+        android:layout_width="80dp"
+        android:layout_height="36dp"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:background="@drawable/button_bg"
+        android:textColor="#fff"
+        android:text="选取视频"/>
+
+    <TextView
+        android:id="@+id/tip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="选取视频"/>
+        android:layout_below="@id/select_video"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:textColor="#666"
+        android:textSize="14dp"/>
 
 </RelativeLayout>
