@@ -53,7 +53,7 @@ public class MainActivity extends Activity {
     String path = uri.getPath();
     String[] pathArray = path.split(":");
     String fileName = pathArray[pathArray.length - 1];
-    return Environment.getExternalStorageDirectory().getAbsolutePath() + "/" + fileName;
+    return /*Environment.getExternalStorageDirectory().getAbsolutePath() + "/" + */fileName;
   }
 
   private View.OnClickListener clickListener = new View.OnClickListener() {
